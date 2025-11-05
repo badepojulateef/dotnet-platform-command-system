@@ -1,0 +1,26 @@
+@PlatformService_HostAddress = http://localhost:32379
+
+GET {{PlatformService_HostAddress}}/weatherforecast/
+Accept: application/json
+###
+
+### GET ALL PLATFORMS
+GET {{PlatformService_HostAddress}}/api/platforms
+Accept: application/json
+###
+
+### GET A PLATFORM
+GET {{PlatformService_HostAddress}}/api/platforms/1
+Accept: application/json
+###
+
+### CREATE A PLATFORM
+POST {{PlatformService_HostAddress}}/api/platforms
+Content-Type: application/json
+
+{
+  "name": "Azure",
+  "publisher": "Microsoft",
+  "cost": "Free"
+}
+###
