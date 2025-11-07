@@ -4,3 +4,8 @@ GET {{CommandService_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+POST {{CommandService_HostAddress}}/api/c/platforms
+Accept: application/json
+
+###
