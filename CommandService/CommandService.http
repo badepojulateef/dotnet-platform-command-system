@@ -1,7 +1,12 @@
-@CommandService_HostAddress = http://localhost:5201
+# @CommandService_HostAddress = http://localhost:5201
+@CommandService_HostAddress = http://myacme.com
 
-GET {{CommandService_HostAddress}}/weatherforecast/
+# http://myacme.com/api/platforms
+
+
+GET {{CommandService_HostAddress}}/weatherforecast
 Accept: application/json
+
 
 ###
 

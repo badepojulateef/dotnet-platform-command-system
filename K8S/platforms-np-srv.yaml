@@ -9,5 +9,5 @@ spec:
   ports:
     - name: platformservice
       protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 80 # external port (client-facing)
+      targetPort: 8080 # internal port inside the container

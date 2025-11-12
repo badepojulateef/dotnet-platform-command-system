@@ -1,4 +1,8 @@
-@PlatformService_HostAddress = http://localhost:32379
+# @PlatformService_HostAddress = http://myacme.com:32379
+@PlatformService_HostAddress = http://myacme.com
+# @PlatformService_HostAddress = http://localhost:32379
+# @PlatformService_HostAddress = http://localhost:5219
+# @PlatformService_HostAddress = http://commands-clusterip-srv:8080/api/c/platforms/
 
 GET {{PlatformService_HostAddress}}/weatherforecast/
 Accept: application/json
