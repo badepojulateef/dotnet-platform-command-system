@@ -27,5 +27,5 @@ spec:
   ports:
     - name: commandservice
       protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 80 ## service
+      targetPort: 8080 ## app listening on this inside the pod

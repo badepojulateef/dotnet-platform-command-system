@@ -27,5 +27,5 @@ spec:
   ports:
     - name: platformservice
       protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 80 ##
+      targetPort: 8080 ## app listening on this
