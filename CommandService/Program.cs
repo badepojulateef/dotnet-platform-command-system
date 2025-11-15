@@ -1,6 +1,16 @@
+using CommandService.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+Console.WriteLine("--> Using In Mem DB");
+builder.Services.AddDbContext<AppDBContext>(opt =>
+  opt.UseInMemoryDatabase("InMem"));
+
+builder.Services.AddScoped<ICommandRepo, CommandRepo>();
+// builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

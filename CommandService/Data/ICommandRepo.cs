@@ -11,7 +11,7 @@ namespace CommandService.Data
     bool SaveChanges();
 
     // Platforms
-    IEnumerable<Platform> GetPlatforms();
+    IEnumerable<Platform> GetAllPlatforms();
     void CreatePlatform(Platform plat);
     bool PlatformExists(int platformId);
 

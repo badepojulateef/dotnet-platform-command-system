@@ -46,7 +46,7 @@ namespace CommandService.Data
         .OrderBy(c => c.Platform.Name);
     }
 
-    public IEnumerable<Platform> GetPlatforms()
+    public IEnumerable<Platform> GetAllPlatforms()
     {
       return _context.Platforms.ToList();
     }
