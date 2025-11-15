@@ -6,10 +6,39 @@ using Microsoft.OpenApi.Models;
 using PlatformService.SyncDataServices.Http;
 
 var builder = WebApplication.CreateBuilder(args);
+var _env = builder.Environment;
 
 // Add services to the container.
-builder.Services.AddDbContext<AppDBContext>(opt =>
-  opt.UseInMemoryDatabase("InMem"));
+
+// Console.WriteLine("--> Using SQl Server DB");
+
+// var conn = builder.Configuration.GetConnectionString("PlatformsConn");
+// Console.WriteLine($"Conn Str --> {conn}");
+
+// Console.WriteLine("--> Using SQl Server DB");
+// builder.Services.AddDbContext<AppDBContext>(opt =>
+// opt.UseSqlServer(conn)
+// );
+
+// mssql-clusterip-srv
+
+if (_env.IsProduction())
+{
+  Console.WriteLine("--> Using SQl Server DB");
+  var conn = builder.Configuration.GetConnectionString("PlatformsConn");
+  Console.WriteLine($"Conn Str --> {conn}");
+
+  builder.Services.AddDbContext<AppDBContext>(opt =>
+  opt.UseSqlServer(conn)
+  );
+}
+else
+{
+  Console.WriteLine("--> Using In Mem DB");
+  builder.Services.AddDbContext<AppDBContext>(opt =>
+    opt.UseInMemoryDatabase("InMem"));
+}
+
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
 builder.Services.AddControllers();
@@ -29,7 +58,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
   app.UseSwagger();
-  app.UseSwaggerUI();
+  app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlatformService v1"));
 }
 
 app.UseHttpsRedirection();
@@ -37,7 +66,7 @@ app.UseHttpsRedirection();
 // app.UseRouting();
 
 
-PrebDB.PrepPopulation(app);
+PrebDB.PrepPopulation(app, _env.IsProduction());
 
 
 
