@@ -1,5 +1,5 @@
-@CommandService_HostAddress = http://localhost:5201
-# @CommandService_HostAddress = http://myacme.com
+# @CommandService_HostAddress = http://localhost:5201
+@CommandService_HostAddress = http://myacme.com
 
 # http://myacme.com/api/platforms
 
@@ -12,7 +12,7 @@ GET {{CommandService_HostAddress}}/api/c/platforms
 Accept: application/json
 ###
 
-GET {{CommandService_HostAddress}}/api/c/platforms/1/commands
+GET {{CommandService_HostAddress}}/api/c/platforms/12/commands
 Accept: application/json
 ###
 
@@ -23,12 +23,13 @@ Accept: application/json
 POST {{CommandService_HostAddress}}/api/c/platforms
 Accept: application/json
 
+
 ### CREATE A PLATFORM
-POST {{CommandService_HostAddress}}/api/c/platforms/1/commands
+POST {{CommandService_HostAddress}}/api/c/platforms/12/commands
 Content-Type: application/json
 
 {
-  "HowTo": "Build a dotnet project",
-  "CommandLine": "dotnet build",
+  "howTo": "Push a docker container to hub",
+  "commandLine": "docker push <name of container>"
 }
 ###

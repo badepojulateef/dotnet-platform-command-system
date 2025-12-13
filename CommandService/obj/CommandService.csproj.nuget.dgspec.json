@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Documents\\lab\\New folder\\CommandService\\CommandService.csproj": {}
+    "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\CommandService\\CommandService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Documents\\lab\\New folder\\CommandService\\CommandService.csproj": {
+    "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\CommandService\\CommandService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\lab\\New folder\\CommandService\\CommandService.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\CommandService\\CommandService.csproj",
         "projectName": "CommandService",
-        "projectPath": "C:\\Users\\HP\\Documents\\lab\\New folder\\CommandService\\CommandService.csproj",
+        "projectPath": "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\CommandService\\CommandService.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\lab\\New folder\\CommandService\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\CommandService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,6 +50,20 @@
               "target": "Package",
               "version": "[15.1.0, )"
             },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.33.2, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.71.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.76.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -71,6 +85,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.10, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.2.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
