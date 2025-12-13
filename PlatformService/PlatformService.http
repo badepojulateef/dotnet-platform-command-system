@@ -23,8 +23,8 @@ POST {{PlatformService_HostAddress}}/api/platforms
 Content-Type: application/json
 
 {
-  "name": "Azure",
-  "publisher": "Microsoft",
+  "name": "Vagrant",
+  "publisher": "Vagrant",
   "cost": "Free"
 }
 ###

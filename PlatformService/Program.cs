@@ -4,6 +4,7 @@ using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using PlatformService.SyncDataServices.Http;
+using PlatformService.AsyncDataServices;
 
 var builder = WebApplication.CreateBuilder(args);
 var _env = builder.Environment;
@@ -41,6 +42,7 @@ else
 
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
+builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(cfg => { }, typeof(Program).Assembly);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

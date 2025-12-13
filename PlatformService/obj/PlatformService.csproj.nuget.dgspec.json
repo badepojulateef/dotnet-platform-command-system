@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Documents\\lab\\New folder\\PlatformService\\PlatformService.csproj": {}
+    "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\PlatformService\\PlatformService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Documents\\lab\\New folder\\PlatformService\\PlatformService.csproj": {
+    "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\PlatformService\\PlatformService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\lab\\New folder\\PlatformService\\PlatformService.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\PlatformService\\PlatformService.csproj",
         "projectName": "PlatformService",
-        "projectPath": "C:\\Users\\HP\\Documents\\lab\\New folder\\PlatformService\\PlatformService.csproj",
+        "projectPath": "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\PlatformService\\PlatformService.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\lab\\New folder\\PlatformService\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\lab\\CommandMicro\\PlatformService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[15.0.1, )"
             },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.71.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -71,6 +75,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.10, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.2.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
