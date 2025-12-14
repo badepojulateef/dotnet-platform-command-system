@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using PlatformService.SyncDataServices.Http;
 using PlatformService.AsyncDataServices;
+using PlatformService.SyncDataServices.Grpc;
 
 var builder = WebApplication.CreateBuilder(args);
 var _env = builder.Environment;
@@ -43,6 +44,7 @@ else
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
 builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
+builder.Services.AddGrpc();
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(cfg => { }, typeof(Program).Assembly);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -93,6 +95,12 @@ app.MapGet("/weatherforecast", () =>
 .WithOpenApi();
 
 app.MapControllers();
+app.MapGrpcService<GrpcPlatformService>();
+
+app.MapGet("protos/platforms.proto", async context =>
+{
+  await context.Response.WriteAsync(File.ReadAllText("Protos/platforms.proto"));
+});
 
 app.Run();
 
