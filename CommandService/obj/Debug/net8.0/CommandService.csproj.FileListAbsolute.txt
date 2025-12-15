@@ -174,7 +174,6 @@ C:\Users\HP\Documents\lab\New folder\CommandService\bin\Debug\net8.0\appsettings
 C:\Users\HP\Documents\lab\New folder\CommandService\bin\Debug\net8.0\RabbitMQ.Client.dll
 C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\appsettings.json
-C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\appsettings.Prooduction.json
 C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\CommandService.exe
 C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\CommandService.deps.json
 C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\CommandService.runtimeconfig.json
@@ -346,3 +345,8 @@ C:\Users\HP\Documents\lab\CommandMicro\CommandService\obj\Debug\net8.0\refint\Co
 C:\Users\HP\Documents\lab\CommandMicro\CommandService\obj\Debug\net8.0\CommandService.pdb
 C:\Users\HP\Documents\lab\CommandMicro\CommandService\obj\Debug\net8.0\CommandService.genruntimeconfig.cache
 C:\Users\HP\Documents\lab\CommandMicro\CommandService\obj\Debug\net8.0\ref\CommandService.dll
+C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\HP\Documents\lab\CommandMicro\CommandService\bin\Debug\net8.0\Grpc.Net.Common.dll

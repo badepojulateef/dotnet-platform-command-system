@@ -6,6 +6,7 @@ using Microsoft.OpenApi.Models;
 using PlatformService.SyncDataServices.Http;
 using PlatformService.AsyncDataServices;
 using PlatformService.SyncDataServices.Grpc;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 var _env = builder.Environment;
@@ -56,6 +57,58 @@ builder.Services.AddSwaggerGen(c =>
 
 Console.WriteLine($"--> CommandService Endpoint {builder.Configuration["CommandService"]}");
 
+// builder.Services.AddHttpsRedirection(o =>
+// {
+//   o.HttpsPort = 7258;
+// });
+
+
+// builder.WebHost.ConfigureKestrel(options =>
+// {
+
+//   // REST - HTTP
+//   options.ListenLocalhost(5219, o =>
+//   {
+//     o.Protocols = HttpProtocols.Http1;
+//     // options.ListenAnyIP(5219);
+//   });
+
+//   // options.ListenAnyIP(5219);
+
+//   // REST - HTTPS
+//   options.ListenLocalhost(7258, o =>
+//   {
+//     o.UseHttps();
+//     o.Protocols = HttpProtocols.Http1;
+//   });
+
+//   // gRPC - HTTPS + HTTP/2
+//   options.ListenLocalhost(7259, o =>
+//   {
+//     o.UseHttps();
+//     o.Protocols = HttpProtocols.Http2;
+//   });
+
+//   // options.ListenAnyIP(5219); // HTTP
+//   // options.ListenAnyIP(7259, listenOptions =>
+//   // {
+//   //   listenOptions.UseHttps();
+//   // });
+
+//   // // HTTPS + HTTP/2 (gRPC)
+//   // options.ListenLocalhost(7259, o =>
+//   // {
+//   //   o.UseHttps();
+//   //   o.Protocols = HttpProtocols.Http2;
+//   // });
+
+//   // Optional HTTP (dev only)
+//   // options.ListenLocalhost(5259, o =>
+//   // {
+//   //   o.Protocols = HttpProtocols.Http2;
+//   // });
+// });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -65,7 +118,7 @@ if (app.Environment.IsDevelopment())
   app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlatformService v1"));
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 // app.UseRouting();
 
